@@ -2,4 +2,26 @@
   background: #fff;
   padding: 2em;
   margin: 1em 1em 1em 0;
+  flex: 0 0 31%;
+  border-radius: 0 1rem 1rem 0;
+  position: relative;
+  box-shadow: 4px 4px 10px #888888;
+}
+.application::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 1rem 1rem 0;
+  height: 100%;
+  width: 2rem;
+}
+.applied::before {
+  background: #ecbbbc;
+}
+.in.process::before {
+  background: #8daae7;
+}
+.offers::before {
+  background: #b6e8e0;
 }

@@ -8,6 +8,7 @@
 .category__title {
   font-size: 2rem;
   text-transform: capitalize;
+  text-decoration: underline;
 }
 .btn__add {
   background: none;
