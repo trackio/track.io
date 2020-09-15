@@ -8,11 +8,13 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main className="main-container">
         <ProfileTab />
-        <CategoryList />
-        <CategoryList />
-        <CategoryList />
+        <div className="categories-container">
+          <CategoryList />
+          <CategoryList />
+          <CategoryList />
+        </div>
       </main>
     </div>
   );

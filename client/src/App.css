@@ -4,3 +4,17 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+
+body {
+  background-color: lightgrey;
+}
+
+.main-container {
+  display: flex;
+  padding: 2em;
+}
+
+.categories-container {
+  flex: 0 0 60%;
+  margin-left: 5%;
+}
