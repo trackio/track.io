@@ -14,7 +14,7 @@ body {
   padding: 2em;
 }
 
-.categories-container {
-  flex: 0 0 60%;
+.applications-container {
+  flex: 0 0 65%;
   margin-left: 5%;
 }

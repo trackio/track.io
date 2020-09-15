@@ -1,0 +1,27 @@
+.applications__group {
+  margin-bottom: 2em;
+}
+.applications {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category__title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+.btn__add {
+  background: none;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 2em;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.btn__add:hover {
+  background: #000;
+  color: #fff;
+}
