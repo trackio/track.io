@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 1em 2em;
+}
+.nav__header {
+  font-size: 2rem;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+.nav__item {
+  margin: 0 2em;
+}
+.fa-search {
+  margin-right: 0.5em;
+}
