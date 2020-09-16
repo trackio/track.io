@@ -1,0 +1,21 @@
+.edit-profile {
+  width: 100%;
+  padding: 1em 2em;
+  border-radius: 3px;
+  margin: 2em 0;
+  background-color: var(--primary-color);
+  color: var(--quaternary-color);
+  transition: .3s ease-in;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+}
+
+.edit-profile:hover {
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.edit-profile:focus {
+  outline: none;
+}

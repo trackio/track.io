@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Application from "../Application/Application";
 import "./ApplicationList.css";
 
 const CategoryList = (props) => {
-  const applications = [
+  const initialApplications = [
     {
       id: 1,
       companyName: "Microsoft",
@@ -89,11 +89,15 @@ const CategoryList = (props) => {
       categoryGroup: "in process",
     },
   ];
+
+  const [ applications, setApplications ] = useState(initialApplications);
+
   return (
     <div className="applications__group">
-      <span className="category__title">{props.stage}</span>
-      <button className="btn__add">+</button>
-
+      <div className="applications__group-header">
+        <div className="category__title">{props.stage}</div>
+        <button className="btn__add"><span>+</span></button>
+      </div>
       <div className="applications">
         {applications
           .filter((application) => {

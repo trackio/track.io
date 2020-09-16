@@ -12,11 +12,11 @@ const Application = (props) => {
   return (
     <>
       <div
-        className={"application " + props.application.categoryGroup}
+        className={`application ${props.application.categoryGroup}`}
         onClick={togglePopup}
       >
-        <p>{props.application.companyName}</p>
-        <p>{props.application.jobTitle}</p>
+        <p className="application__company">{props.application.companyName}</p>
+        <p className="application__title">{props.application.jobTitle}</p>
       </div>
       {isOpen && (
         <Popup

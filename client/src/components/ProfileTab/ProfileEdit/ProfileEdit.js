@@ -1,7 +1,8 @@
 import React from "react";
+import './ProfileEdit.css';
 
 const ProfileEdit = (props) => {
-  return <h1>Edit profile</h1>;
+  return <button className="edit-profile">Edit profile</button>;
 };
 
 export default ProfileEdit;
