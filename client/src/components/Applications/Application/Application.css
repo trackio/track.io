@@ -5,7 +5,22 @@
   flex: 0 0 31%;
   border-radius: 0 1rem 1rem 0;
   position: relative;
+  cursor: pointer;
   /*box-shadow: 4px 4px 10px #888888;*/
+}
+.applied,
+.in.process,
+.offers {
+  transition: 0.2s ease-out;
+}
+.applied:hover {
+  background-color: #ecbbbc;
+}
+.in.process:hover {
+  background-color: #8daae7;
+}
+.offers:hover {
+  background-color: #b6e8e0;
 }
 .application::before {
   content: "";
@@ -25,3 +40,4 @@
 .offers::before {
   background: #b6e8e0;
 }
+
