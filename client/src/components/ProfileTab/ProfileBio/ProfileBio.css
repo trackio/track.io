@@ -1,3 +1,19 @@
 .profile__bio {
   text-align: center;
 }
+.profile__name {
+  font-size: 2rem;
+}
+.profile__pic {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+.prof {
+  margin-bottom: 0.5em;
+}
+.img {
+  min-height: auto;
+  width: 100%;
+  border-radius: 50%;
+}
