@@ -13,6 +13,7 @@
 .category__title {
   font-size: 2rem;
   text-transform: capitalize;
+  font-weight: 600;
 }
 .btn__add {
   background: var(--primary-color);
@@ -25,13 +26,13 @@
   cursor: pointer;
   transition: 0.3s ease-in;
   position: absolute;
-  right: 2rem;
+  right: calc(2rem + 1em);
 }
 .btn__add:hover {
   background: var(--quaternary-color);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
-.btn__add:focus{
+.btn__add:focus {
   outline: none;
 }

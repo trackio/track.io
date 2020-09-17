@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./ProfileBio.css";
 import profpic from "../../../assets/profpic.jpeg";
+import { ProfileContext } from "../../../context/ProfileContext";
 
-const ProfileBio = (props) => {
+const ProfileBio = () => {
+  const { user } = useContext(ProfileContext);
+  console.log(user);
+
   const dummybio = {
     propic: profpic,
-    name: 'Paul Park',
-    title: 'Front End Engineer',
-    job: 'Google',
-    email: 'paulpark673@gmail.com',
-    location: 'Los Angeles, CA'
+    name: "Paul Park",
+    title: "Front End Engineer",
+    job: "Google",
+    email: "paulpark673@gmail.com",
+    location: "Los Angeles, CA",
   };
-
-  const [bio, setBio] = useState(dummybio)
+  const [bio, setBio] = useState(dummybio);
 
   return (
     <div className="profile__bio">

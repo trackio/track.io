@@ -8,8 +8,9 @@
   cursor: pointer;
   /*box-shadow: 4px 4px 10px #888888;*/
 }
-.application__company{
+.application__company {
   font-size: 1.5rem;
+  font-weight: 500;
 }
 .applied,
 .in.process,
@@ -23,10 +24,12 @@
   top: 0;
   /* border-radius: 0 1rem 1rem 0; */
   height: 100%;
-  width: .25rem;
+  width: 0.25rem;
 }
-.applied::before, .in.process::before, .offers::before{
-  transition: .3s ease-in;
+.applied::before,
+.in.process::before,
+.offers::before {
+  transition: 0.3s ease-in;
 }
 .applied::before {
   background: #ecbbbc;
@@ -37,20 +40,19 @@
 .offers::before {
   background: #b6e8e0;
 }
-.applied:hover:before, .in.process:hover:before, .offers:hover:before {
+.applied:hover:before,
+.in.process:hover:before,
+.offers:hover:before {
   width: 2rem;
   right: 0;
   border-radius: 0 1rem 1rem 0;
 }
-.applied:hover:before{
+.applied:hover:before {
   background: #ecbbbc;
 }
-.in.process:hover:before{
+.in.process:hover:before {
   background: #8daae7;
 }
-.offers:hover:before{
+.offers:hover:before {
   background: #b6e8e0;
 }
-
-
-

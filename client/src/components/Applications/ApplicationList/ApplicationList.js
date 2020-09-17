@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Application from "../Application/Application";
 import "./ApplicationList.css";
 
-const CategoryList = (props) => {
+const ApplicationList = (props) => {
   const initialApplications = [
     {
       id: 1,
@@ -90,13 +90,15 @@ const CategoryList = (props) => {
     },
   ];
 
-  const [ applications, setApplications ] = useState(initialApplications);
+  const [applications, setApplications] = useState(initialApplications);
 
   return (
     <div className="applications__group">
       <div className="applications__group-header">
         <div className="category__title">{props.stage}</div>
-        <button className="btn__add"><span>+</span></button>
+        <button className="btn__add">
+          <span>+</span>
+        </button>
       </div>
       <div className="applications">
         {applications
@@ -113,4 +115,4 @@ const CategoryList = (props) => {
   );
 };
 
-export default CategoryList;
+export default ApplicationList;
