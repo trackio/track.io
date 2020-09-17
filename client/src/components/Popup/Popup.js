@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Popup.css";
+import { ProfileContext } from "../../context/ProfileContext";
 
-const Popup = ({ application, handleClose, applications, setApplications }) => {
+const Popup = ({ application, handleClose }) => {
   const [appData, setAppData] = useState(application);
+
+  const { applications, setApplications } = useContext(ProfileContext);
 
   const submitData = (e) => {
     e.preventDefault();
@@ -11,11 +14,11 @@ const Popup = ({ application, handleClose, applications, setApplications }) => {
       if (app.id === appData.id) {
         app.companyName = appData.companyName;
         app.jobTitle = appData.jobTitle;
-        return app;
       }
+      return app;
     });
     handleClose();
-    setApplications([...applications, copyApp]);
+    setApplications(copyApp);
   };
 
   return (

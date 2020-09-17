@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Navbar from "./components/Layout/Navbar";
 import ProfileTab from "./components/ProfileTab/ProfileTab";
 import ApplicationList from "./components/Applications/ApplicationList/ApplicationList";
 import "./App.css";
-import { ProfileProvider } from "./context/ProfileContext";
+import { ProfileContext } from "./context/ProfileContext";
 
 const App = () => {
   const [applicationStages, setApplicationStages] = useState([
@@ -12,13 +12,17 @@ const App = () => {
     "offers",
   ]);
 
+  const { fetchUserData } = useContext(ProfileContext);
+
+  useEffect(() => {
+    fetchUserData("https://jsonplaceholder.typicode.com/users");
+  }, []);
+
   return (
     <div>
       <Navbar />
       <main className="main-container">
-        <ProfileProvider>
-          <ProfileTab />
-        </ProfileProvider>
+        <ProfileTab />
         <div className="applications-container">
           {applicationStages.map((stage, i) => (
             <ApplicationList stage={stage} key={`category_${i}`} />

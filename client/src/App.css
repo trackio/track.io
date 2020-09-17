@@ -21,6 +21,10 @@ input:focus,
 button:focus {
   outline: none;
 }
+
+a {
+  color: inherit;
+}
 .main-container {
   display: flex;
   padding: 2em;

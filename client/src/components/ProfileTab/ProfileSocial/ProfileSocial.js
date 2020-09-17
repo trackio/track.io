@@ -14,10 +14,14 @@ const ProfileSocial = (props) => {
       </div>
       <ul className="profsocial profile__social-links">
         <li className="profile__social-link">
-          <i className="fab fa-instagram"></i>
+          <a href="#">
+            <i className="fab fa-instagram"></i>
+          </a>
         </li>
         <li className="profile__social-link">
-          <i className="fab fa-linkedin"></i>
+          <a href="#">
+            <i className="fab fa-linkedin"></i>
+          </a>
         </li>
       </ul>
     </div>

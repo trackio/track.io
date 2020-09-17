@@ -5,7 +5,6 @@ import { ProfileContext } from "../../../context/ProfileContext";
 
 const ProfileBio = () => {
   const { user } = useContext(ProfileContext);
-  console.log(user);
 
   const dummybio = {
     propic: profpic,

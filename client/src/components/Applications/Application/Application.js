@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Application.css";
 import Popup from "../../Popup/Popup";
 
-const Application = ({ application, applications, setApplications }) => {
+const Application = ({ application }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -18,14 +18,7 @@ const Application = ({ application, applications, setApplications }) => {
         <p className="application__company">{application.companyName}</p>
         <p className="application__title">{application.jobTitle}</p>
       </div>
-      {isOpen && (
-        <Popup
-          handleClose={togglePopup}
-          application={application}
-          applications={applications}
-          setApplications={setApplications}
-        />
-      )}
+      {isOpen && <Popup handleClose={togglePopup} application={application} />}
     </>
   );
 };
