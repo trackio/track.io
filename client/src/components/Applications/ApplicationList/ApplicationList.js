@@ -107,7 +107,12 @@ const ApplicationList = (props) => {
           })
           .map((application) => (
             <>
-              <Application key={application.id} application={application} />
+              <Application
+                key={application.id}
+                application={application}
+                applications={applications}
+                setApplications={setApplications}
+              />
             </>
           ))}
       </div>

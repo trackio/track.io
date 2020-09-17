@@ -17,6 +17,10 @@ body {
   background-color: var(--quaternary-color);
 }
 
+input:focus,
+button:focus {
+  outline: none;
+}
 .main-container {
   display: flex;
   padding: 2em;

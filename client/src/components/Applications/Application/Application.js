@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Application.css";
 import Popup from "../../Popup/Popup";
 
-const Application = (props) => {
+const Application = ({ application, applications, setApplications }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -12,16 +12,18 @@ const Application = (props) => {
   return (
     <>
       <div
-        className={`application ${props.application.categoryGroup}`}
+        className={`application ${application.categoryGroup}`}
         onClick={togglePopup}
       >
-        <p className="application__company">{props.application.companyName}</p>
-        <p className="application__title">{props.application.jobTitle}</p>
+        <p className="application__company">{application.companyName}</p>
+        <p className="application__title">{application.jobTitle}</p>
       </div>
       {isOpen && (
         <Popup
           handleClose={togglePopup}
-          categoryGroup={props.application.categoryGroup}
+          application={application}
+          applications={applications}
+          setApplications={setApplications}
         />
       )}
     </>
