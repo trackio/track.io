@@ -1,22 +1,54 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import "./Popup.css";
+import { ProfileContext } from "../../context/ProfileContext";
 
-const Popup = (props) => {
+const Popup = ({ application, handleClose }) => {
+  const [appData, setAppData] = useState(application);
+
+  const { applications, setApplications } = useContext(ProfileContext);
+
+  const submitData = (e) => {
+    e.preventDefault();
+    let copyApp = [...applications];
+    copyApp.map((app) => {
+      if (app.id === appData.id) {
+        app.companyName = appData.companyName;
+        app.jobTitle = appData.jobTitle;
+      }
+      return app;
+    });
+    handleClose();
+    setApplications(copyApp);
+  };
+
   return (
     <div className="popup-box">
-      <div className={`box box${props.categoryGroup}`}>
-        <span className="close-icon" onClick={props.handleClose}>
+      <div className="box">
+        <span className="close-icon" onClick={handleClose}>
           x
         </span>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <form className="application__update-form" onSubmit={submitData}>
+          <input
+            value={appData.companyName}
+            className="input"
+            onChange={(e) =>
+              setAppData({ ...appData, companyName: e.target.value })
+            }
+          />
+          <input
+            value={appData.jobTitle}
+            className="input"
+            onChange={(e) =>
+              setAppData({ ...appData, jobTitle: e.target.value })
+            }
+          />
+          <button
+            type="submit"
+            className={`btn__update box${appData.categoryGroup}`}
+          >
+            Update
+          </button>
+        </form>
       </div>
     </div>
   );

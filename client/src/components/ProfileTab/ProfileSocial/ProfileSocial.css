@@ -1,0 +1,17 @@
+.profsocial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5em 0;
+}
+.profile__social-followers {
+}
+.profile__social-following {
+}
+.profile__social-links {
+  list-style: none;
+  justify-content: start;
+}
+.profile__social-link {
+  margin: 0 1em 0 0;
+}

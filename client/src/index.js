@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { ProfileProvider } from "./context/ProfileContext";
 
 ReactDOM.render(
   <>
-    <App />
+    <ProfileProvider>
+      <App />
+    </ProfileProvider>
   </>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-

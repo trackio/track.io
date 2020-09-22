@@ -4,7 +4,7 @@ import ProfileEdit from "./ProfileEdit/ProfileEdit";
 import ProfileSocial from "./ProfileSocial/ProfileSocial";
 import "./ProfileTab.css";
 
-const ProfileTab = (props) => {
+const ProfileTab = () => {
   return (
     <div className="profile">
       <ProfileBio />
